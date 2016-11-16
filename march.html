@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>welcome，paul！</title>
+    <link rel="stylesheet" href="css/global.css"/>
+    <link rel="stylesheet" href="css/font.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+
+    <style>
+        html{width: 100%;height: 100%;}
+        body{background: url("img/bc-0.png");background-size: 100%;text-align: center;color:#fff;}
+        a{color:#fff;}
+        a:hover{color:#fff;text-decoration: none;}
+        header{height: 10vh;display: flex;line-height: 10vh;font-family: "iconfont";}
+        header span{flex: 1;font-size: 25px;}
+        header h1{flex: 5;height: 10vh;}
+        article{height: 80vh;background: rgba(0,0,0,.15);overflow-y:scroll}
+        article ul{width:84%;margin:0 auto 0;}
+        article ul li{height:10vh;border-bottom: 1px solid #fff;display:flex;}
+        article ul li span{flex: 1;text-align: left;line-height: 10vh;font-size: 22px;}
+        article ul li i{flex: 1;text-align:right;font-size: 20px;font-style:normal;}
+        article ul li i span:last-child{font-size: 10px;}
+        footer{height: 10vh;display: flex;line-height: 10vh;font-size: 25px;font-family: "iconfont";}
+        footer span{flex: 1}
+
+        /*全部样式*/
+        #full-clndr {width: 100%;max-width: 600px;margin:0 auto;color:#fff;border-bottom: 1px solid #fff;}
+        /*年月*/
+        #full-clndr .clndr-controls {color: white;text-align: center;border-bottom: 1px solid #fff;padding:5px 0 ;}
+        /*向左箭头*/
+        #full-clndr .clndr-controls .clndr-previous-button {float: left;text-align: left;margin-left: 50px;}
+        /*向右箭头*/
+        #full-clndr .clndr-controls .clndr-next-button {float: right;text-align: right;margin-right: 50px;}
+        /*左右箭头*/
+        #full-clndr .clndr-controls .clndr-previous-button,
+        #full-clndr .clndr-controls .clndr-next-button {width: 30px;cursor: pointer;}
+        #full-clndr .clndr-controls .clndr-previous-button:hover,
+        #full-clndr .clndr-controls .clndr-next-button:hover {opacity: 0.5;}
+        /*日期表格全部*/
+        #full-clndr .clndr-grid {width: 100%;}
+        /*日期表格头部*/
+        #full-clndr .clndr-grid .days-of-the-week {width: 100%;}
+        /*日期头部表格每格*/
+        #full-clndr .clndr-grid .days-of-the-week .header-day {width: 14.28%;padding:2px 0;margin:0px;text-align: center;color: white;
+            display: inline-block;}
+        /*日期天数全部*/
+        #full-clndr .clndr-grid .days {width: 100%;}
+        /*日期天数表格每格*/
+        #full-clndr .clndr-grid .days .day,
+        #full-clndr .clndr-grid .days .empty {width: 14.28%;height: 36px;text-align: center;line-height: 40px;color: #fff;display: inline-block;}
+        #full-clndr .clndr-grid .days .day.event .day-number,
+        #full-clndr .clndr-grid .days .empty.event .day-number {padding-bottom: 4px;border-bottom: 2px solid #3883a3;}
+        #full-clndr .clndr-grid .days .day.adjacent-month .day-number,
+        #full-clndr .clndr-grid .days .empty.adjacent-month .day-number {opacity: 0.3;}
+        /*当天*/
+        #full-clndr .clndr-grid .days .today {text-decoration:underline;box-shadow: 0 0 10px #fff inset;}
+        #full-clndr .clndr-grid .days .past:hover{}
+        #full-clndr .clndr-grid .days .today:hover{}
+        /*鼠标点中日期*/
+        .focusIn{box-shadow: 0 0 10px #fff inset;}
+
+
+    </style>
+</head>
+<body>
+<header>
+    <span id="navigate">&#xe610;</span>
+        <h1>date</h1>
+    <span id="timeling"> &#xe60c;</span>
+</header>
+<article>
+        <div id="full-clndr">
+            <script type="text/template" id="id_clndr_template">
+                <div class="clndr-controls">
+                    <div class="clndr-previous-button"><<</div>
+                    <div class="clndr-next-button">>></div>
+                    <div class="month"><%= month %> <%= year %></div>
+                </div>
+                <div class="clndr-grid">
+                    <div class="days-of-the-week">
+                        <% _.each(daysOfTheWeek, function(day) { %><div class="header-day"><%= day %></div><% }); %>
+                    </div>
+                    <div class="days">
+                        <% _.each(days, function(day) { %><div class="<%= day.classes %>" id="<%= day.id %>"><span class="day-number"><%= day.day %></span></div><% }); %>
+                    </div>
+                </div>
+            </script>
+        </div>
+    <ul>
+        <li>
+            <span>Coffee Break</span>
+            <i>
+                <span>8:00</span>
+                <span>am</span>
+            </i>
+        </li>
+        <li>
+            <span>Coffee Break</span>
+            <i>
+                <span>8:00</span>
+                <span>am</span>
+            </i>
+        </li>
+        <li>
+            <span>Coffee Break</span>
+            <i>
+                <span>8:00</span>
+                <span>am</span>
+            </i>
+        </li>
+    </ul>
+</article>
+<footer>
+        <span id="march">&#xe606;</span>
+        <span></span>
+        <span id="add">&#xe60f;</span>
+        <span></span>
+        <span id="statistical">&#xe609;</span>
+    </footer>
+</div>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="clndr/underscore.min.js"></script>
+<script src="clndr/moment.min.js"></script>
+<script src="clndr/clndr.min.js"></script>
+<script>
+    $("#full-clndr").clndr({
+        template: $('#id_clndr_template').html(),
+        clickEvents: {
+            onMonthChange: function(month) {
+                // TODO: 这边写月份改变事件，控制底部线条图的变化
+            },
+            click: function(target){
+                var dateDom = $(target.element);
+                if((!dateDom.hasClass("focusIn")) && (dateDom.hasClass("past") || dateDom.hasClass("today"))){
+                    $(".focusIn").removeClass("focusIn");
+                    dateDom.addClass("focusIn");
+                    // TODO: 这边写日期改变的事件，控制右边环形图的变化
+
+                }
+            },
+        },
+        daysOfTheWeek : [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ],
+        forceSixRows : true,
+        adjacentDaysChangeMonth : true
+    });
+    $("")
+</script>
+<script src="js/mui.min.js"></script>
+    <script>
+    	//初始化窗口
+	mui.init();
+    	//绑定事件
+    	document.getElementById('navigate').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'navigate.html', //目标页面的url
+			show:{
+				aniShow:'slide-in-right',//动画名称
+    				duration:500		  //动画时间
+				},//动画  			
+    			waiting:{
+    				autoShow:false
+    			}
+    		})
+    	})
+    	document.getElementById('timeling').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'timeling.html', //目标页面的url
+			show:{
+				aniShow:'slide-in-right',//动画名称
+    				duration:500		  //动画时间
+				},//动画  			
+    			waiting:{
+    				autoShow:false
+    			}
+    		})
+    	})
+    	document.getElementById('add').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'add.html', //目标页面的url
+			show:{
+				aniShow:'slide-in-right',//动画名称
+    				duration:500		  //动画时间
+				},//动画  			
+    			waiting:{
+    				autoShow:false
+    			}
+    		})
+    	})
+    	document.getElementById('march').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'march.html', //目标页面的url
+			show:{
+				aniShow:'slide-in-right',//动画名称
+    				duration:500		  //动画时间
+				},//动画  			
+    			waiting:{
+    				autoShow:false
+    			}
+    		})
+    	})
+    	document.getElementById('statistical').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'statistical.html', //目标页面的url
+			show:{
+				aniShow:'slide-in-right',//动画名称
+    				duration:500		  //动画时间
+				},//动画  			
+    			waiting:{
+    				autoShow:false
+    			}
+    		})
+    	})
+    </script>
+</body>
+</html>

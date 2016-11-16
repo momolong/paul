@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>welcome，paul！</title>
+    <link rel="stylesheet" href="css/global.css"/>
+    <link rel="stylesheet" href="css/font.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <style>
+        html{width: 100%;height: 100%;}
+        body{background: url("img/bc-0.png");background-size: 100%;text-align: center;color:#fff;}
+        a{color:#fff;}
+        a:hover{color:#fff;text-decoration: none;}
+        i{font-style:normal;}
+        header{height: 10vh;display: flex;line-height: 10vh;}
+        header span{flex: 1;font-size: 25px;font-family: "iconfont";}
+        header h1{flex: 5;}
+        .head{border:3px solid rgba(255,255,255,.1);width:3ch;height:3ch;border-radius: 50%;overflow: hidden;margin-top:2vh;}
+        .head img{width:100px;margin:-20px 0 0 -40px;}
+        article{height: 80vh;background: rgba(0,0,0,.15);}
+        article h1{height:10vh;border-bottom: 1px solid #fff;line-height: 10vh;font-size: 20px;font-weight: normal;}
+        article>p{font-family: "iconfont";height: 20vh;border-bottom: 1px solid #fff;display: flex;}
+        article>p>span{display: block;flex: 1;height:100%;border-right: 1px solid #fff;text-align: center;}
+        article>p>span>i:nth-child(1){display:block;width:100%;line-height:14vh;font-size: 45px;}
+        article>p>span>i:nth-child(1)>span{font-size: 20px;line-height:5vh;}
+        article ul{width:84%;margin:4vh auto 0;}
+        article ul li{height:10vh;border-bottom: 1px solid #fff;display:flex}
+        article ul li span{flex: 1;text-align: left;line-height: 10vh;font-size: 22px;}
+        article ul li i{flex: 1;text-align:right;font-size: 20px;}
+        article ul li i span:last-child{font-size: 10px;}
+
+
+        footer{height: 10vh;display: flex;line-height: 10vh;font-size: 25px;font-family: "iconfont";}
+        footer span{flex: 1}
+    </style>
+</head>
+<body>
+    <header>
+        <span id="navigate">&#xe610;</span>
+        <h1>THURSDAY</h1>
+        <span id="settings">
+            <div class="head"><img src="img/head.png" alt=""/></div>
+        </span>
+    </header>
+    <article>
+        <h1>March 12</h1>
+        <p>
+            <span>
+                <i>5</i>
+                <i>TASKS DUE</i>
+            </span>
+            <span>
+                <i><span>&#xe601;</span>72°</i>
+                <i>TASKS DUE</i>
+            </span>
+        </p>
+        <ul>
+            <li>
+                <span>Coffee Break</span>
+                <i>
+                    <span>8:00</span>
+                    <span>am</span>
+                </i>
+            </li>
+            <li>
+                <span>Coffee Break</span>
+                <i>
+                    <span>6:00</span>
+                    <span>am</span>
+                </i>
+            </li>
+            <li>
+                <span>Coffee Break</span>
+                <i>
+                    <span>3:00</span>
+                    <span>am</span>
+                </i>
+            </li>
+            <li>
+            <span>Coffee Break</span>
+            <i>
+                <span>1:00</span>
+                <span>am</span>
+            </i></li>
+        </ul>
+    </article>
+   <footer>
+        <span><a href="#" id="march">&#xe606;</a></span>
+        <span></span>
+        <span><a href="#" id="add">&#xe60f;</a></span>
+        <span></span>
+        <span><a href="#" id="statistical">&#xe609;</a></span>
+    </footer>
+</div>
+<script src="js/mui.min.js"></script>
+    <script>
+    	//初始化窗口
+	mui.init();
+    	//绑定事件
+    	document.getElementById('navigate').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'navigate.html', //目标页面的url
+			show:{
+				aniShow:'slide-in-right',//动画名称
+    				duration:500		  //动画时间
+				},//动画  			
+    			waiting:{
+    				autoShow:false
+    			}
+    		})
+    	})
+    	document.getElementById('settings').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'settings.html', //目标页面的url
+			show:{
+				aniShow:'slide-in-right',//动画名称
+    				duration:500		  //动画时间
+				},//动画  			
+    			waiting:{
+    				autoShow:false
+    			}
+    		})
+    	})
+    	document.getElementById('add').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'add.html', //目标页面的url
+			show:{
+				aniShow:'slide-in-right',//动画名称
+    				duration:500		  //动画时间
+				},//动画  			
+    			waiting:{
+    				autoShow:false
+    			}
+    		})
+    	})
+    	document.getElementById('march').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'march.html', //目标页面的url
+			show:{
+				aniShow:'slide-in-right',//动画名称
+    				duration:500		  //动画时间
+				},//动画  			
+    			waiting:{
+    				autoShow:false
+    			}
+    		})
+    	})
+    	document.getElementById('statistical').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'statistical.html', //目标页面的url
+			show:{
+				aniShow:'slide-in-right',//动画名称
+    				duration:500		  //动画时间
+				},//动画  			
+    			waiting:{
+    				autoShow:false
+    			}
+    		})
+    	})
+    </script>
+</body>
+</html>

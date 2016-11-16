@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>welcome，paul！</title>
+    <link rel="stylesheet" href="css/global.css"/>
+    <link rel="stylesheet" href="css/font.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <style>
+        html{width: 100%;height: 100%;}
+        body{background: url("img/bc-0.png");background-size: 100%;text-align: center;color:#fff;}
+        a{color:#fff;}
+        a:hover{color:#fff;text-decoration: none;}
+        i{font-style:normal;}
+        header{height: 10vh;display: flex;line-height: 10vh;}
+        header span{flex: 1;font-size: 25px;font-family: "iconfont";}
+        header h1{flex:5;}
+
+        article{height: 80vh;background: rgba(0,0,0,.15);}
+        article h1{height:20vh;border-bottom: 1px solid #fff;font-size: 20px;font-weight: normal;display: flex;}
+        article h1>span{flex: 1;line-height: 20vh;text-align: right;font-size: 55px}
+        article h1 i{flex: 1;text-align: left;padding: 5vh;}
+        article h1 i span{display: block;}
+        article h1 i>span:nth-child(1){font-size: 30px;}
+        article h1 i>span:nth-child(2){font-size: 15px;color: #eee;}
+        article>p{height: 10vh;border-bottom: 1px solid #fff;display: flex;line-height: 10vh;}
+        article>p>span{display: block;flex: 1;height:100%;border-right: 1px solid #fff;text-align: center;}
+        article>p>span>i:nth-child(1){display:block;width:100%;line-height:14vh;font-size: 45px;}
+        article>p>span>i:nth-child(1)>span{font-size: 20px;line-height:5vh;}
+        article ul{width:84%;margin:0 auto 0;}
+        article ul li{height:10vh;border-bottom: 1px solid #fff;display:flex}
+        article ul li span{flex: 1;text-align: left;line-height: 10vh}
+        article ul li i{flex: 2;text-align:left;font-size: 20px;}
+        article ul li i span:last-child{font-size: 10px;}
+        article ul li:last-child{border: none;}
+
+
+        footer{height: 10vh;display: flex;line-height: 10vh;font-size: 25px;}
+        footer span{flex: 1;font-family: "iconfont";}
+    </style>
+</head>
+<body>
+<header>
+    <span id="thursday-a">&#xe611;</span>
+    <h1>PAUL JENSEN</h1>
+    <span></span>
+</header>
+<article>
+    <h1>
+        <span>12</span>
+        <i>
+            <span>Thursday</span>
+            <span>MARCH 2015</span>
+        </i>
+    </h1>
+    <p>
+        <span>2:00 pm</span>
+        <span>--</span>
+    </p>
+    <ul>
+        <li>
+            <span>TITLE</span>
+            <i>
+                <span>Weekiy Stand Up</span>
+            </i>
+        </li>
+        <li>
+            <span>WHERE</span>
+            <i>
+                <span>Hangouts</span>
+            </i>
+        </li>
+        <li>
+            <span>NOTIFY</span>
+            <i>
+                <span>20 minutes before</span>
+            </i>
+        </li>
+
+        <li>
+            <span>PEOPLE</span>
+            <i>
+                <span>Peter Alice Tom</span>
+            </i>
+        </li>
+
+        <li>
+            <span>REPEAT</span>
+            <i>
+                <span>No</span>
+            </i>
+        </li>
+    </ul>
+</article>
+<footer>
+    <span></span>
+    <span></span>
+    <span id="thursday">&#xe612;</span>
+    <span></span>
+    <span></span>
+</footer>
+</div>
+<script src="js/mui.min.js"></script>
+    <script>
+    	//初始化窗口
+	mui.init();
+    	//绑定事件
+    	document.getElementById('thursday-a').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'thursday.html', //目标页面的url
+			show:{
+				aniShow:'slide-in-right',//动画名称
+    				duration:500		  //动画时间
+				},//动画  			
+    			waiting:{
+    				autoShow:false
+    			}
+    		})
+    	})
+    	document.getElementById('thursday').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'thursday.html', //目标页面的url
+			show:{
+				aniShow:'slide-in-right',//动画名称
+    				duration:500		  //动画时间
+				},//动画  			
+    			waiting:{
+    				autoShow:false
+    			}
+    		})
+    	})
+    	</script>
+</body>
+</html>

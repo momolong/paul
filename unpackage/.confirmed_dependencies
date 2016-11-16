@@ -1,0 +1,202 @@
+{
+  "groups.html": {
+    "href": "groups.html",
+    "resources": [
+      "css/global.css",
+      "css/font.css",
+      "css/index.css",
+      "js/jquery-3.1.0.min.js",
+      "img/bc-0.png",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "index.html",
+      "thursday.html"
+    ],
+    "priority": 0
+  },
+  "add.html": {
+    "href": "add.html",
+    "resources": [
+      "css/global.css",
+      "css/font.css",
+      "css/index.css",
+      "js/jquery-3.1.0.min.js",
+      "img/bc-0.png",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "thursday.html"
+    ],
+    "priority": 0
+  },
+  "travel.html": {
+    "href": "travel.html",
+    "resources": [
+      "css/global.css",
+      "css/font.css",
+      "css/index.css",
+      "js/jquery-3.1.0.min.js",
+      "img/bc-0.png",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "add.html",
+      "thursday.html"
+    ],
+    "priority": 0
+  },
+  "navigate.html": {
+    "href": "navigate.html",
+    "resources": [
+      "css/global.css",
+      "css/font.css",
+      "css/index.css",
+      "js/jquery-3.1.0.min.js",
+      "img/bc-0.png",
+      "img/bc-2-1.png",
+      "img/bc-2-2.png",
+      "img/bc-2-3.png",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "thursday.html",
+      "travel.html"
+    ],
+    "priority": 0
+  },
+  "settings.html": {
+    "href": "settings.html",
+    "resources": [
+      "css/global.css",
+      "css/font.css",
+      "css/index.css",
+      "js/jquery-3.1.0.min.js",
+      "img/bc-0.png",
+      "js/mui.min.js",
+      "img/head.png"
+    ],
+    "refer": [
+      "groups.html",
+      "navigate.html"
+    ],
+    "priority": 0
+  },
+  "timeling.html": {
+    "href": "timeling.html",
+    "priority": 0
+  },
+  "march.html": {
+    "href": "march.html",
+    "resources": [
+      "css/global.css",
+      "css/font.css",
+      "css/index.css",
+      "img/bc-0.png",
+      "js/jquery-3.1.0.min.js",
+      "clndr/underscore.min.js",
+      "clndr/moment.min.js",
+      "clndr/clndr.min.js",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "statistical.html",
+      "march.html",
+      "navigate.html",
+      "add.html",
+      "timeling.html"
+    ],
+    "priority": 0
+  },
+  "statistical.html": {
+    "href": "statistical.html",
+    "resources": [
+      "css/global.css",
+      "css/font.css",
+      "css/index.css",
+      "js/jquery-3.1.0.min.js",
+      "img/bc-0.png",
+      "js/mui.min.js",
+      "img/head.png"
+    ],
+    "refer": [
+      "settings.html",
+      "statistical.html",
+      "march.html",
+      "navigate.html",
+      "add.html"
+    ],
+    "priority": 0
+  },
+  "thursday.html": {
+    "href": "thursday.html",
+    "resources": [
+      "css/global.css",
+      "css/font.css",
+      "css/index.css",
+      "js/jquery-3.1.0.min.js",
+      "img/bc-0.png",
+      "js/mui.min.js",
+      "img/head.png",
+      "ttf/iconfont.ttf"
+    ],
+    "refer": [
+      "settings.html",
+      "statistical.html",
+      "march.html",
+      "navigate.html",
+      "add.html"
+    ],
+    "priority": 0
+  },
+  "phone.html": {
+    "href": "phone.html",
+    "resources": [
+      "js/mui.min.js",
+      "css/global.css",
+      "css/font.css",
+      "js/jquery-3.1.0.min.js",
+      "img/bc-0.png",
+      "img/bc-2.png"
+    ],
+    "refer": [
+      "thursday.html"
+    ],
+    "priority": 0
+  },
+  "registered.html": {
+    "href": "registered.html",
+    "resources": [
+      "css/global.css",
+      "css/font.css",
+      "js/jquery-3.1.0.min.js",
+      "img/bc-0.png",
+      "js/mui.min.js",
+      "ttf/iconfont.ttf"
+    ],
+    "refer": [
+      "phone.html",
+      "index.html"
+    ],
+    "priority": 0
+  },
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "css/global.css",
+      "css/font.css",
+      "css/index.css",
+      "js/jquery-3.1.0.min.js",
+      "img/bc-1.png",
+      "img/Logo.png",
+      "js/mui.min.js",
+      "img/head.png",
+      "ttf/iconfont.ttf"
+    ],
+    "refer": [
+      "thursday.html",
+      "registered.html"
+    ],
+    "priority": 0
+  }
+}

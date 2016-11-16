@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>logn</title>
+    <link rel="stylesheet" href="css/global.css"/>
+    <link rel="stylesheet" href="css/font.css"/>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <style>
+        html{width: 100%;height: 100%;}
+        body{width: 100%;height: 100%;background: url("img/bc-0.png");background-size: 100%;}
+        a{color:#fff;text-decoration: none;}
+        a:hover{color: #fff;text-decoration: none;}
+
+        body{background: url("img/bc-2.png");background-size: 100%;}
+
+        header{height: 10%;background: rgba(0,0,0,.15);}
+
+        article{width:100%;height:80%;background: rgba(0,0,0,.15);color:#fff;position: relative;overflow: hidden;}
+        .banner-ul li{position: absolute;top:0;left: 0;width:100%;height:100%;display: none;}
+        .banner-ul li:first-child{display: block;}
+        .banner-ul li>div{margin-top: 15vh;}
+        .banner-ul li>p{font-size: 10px;margin-top: 20vh;}
+        .banner-ul li:nth-child(2)>form{width:84%;margin: 8vh auto 0;}
+        .banner-ul li:nth-child(2)>form>p{height:10vh;width:100%;border-bottom: 1px solid #fff;display: flex;line-height: 10vh;}
+        .banner-ul li:nth-child(2)>form>p span{flex: 1;}
+        .banner-ul li:nth-child(2)>form>p i{flex: 1;}
+        .banner-ul li:nth-child(2)>form>p input{background: none;border:none;width: 100%;}
+        .banner-ul li:nth-child(2)>form>p input[type=button]{box-shadow:0 0 10px #fff inset;border:1px solid #fff;border-radius: 2px; padding:1vh;color:#fff;}
+        .banner-span {padding: 4.5ch;display: flex;margin:0 auto;width:15%;}
+        .banner-span p{flex: 1;width:5%;}
+        .banner-span span{border: 1px solid #fff;border-radius: 50%;width:8px;height:8px;display: block;margin: 0 auto;}
+        .on{background: #fff;}
+
+        article .phone{margin: 0 auto;width:25%; font-family: "iconfont";}
+        article .phone-a{width:100%;border:2px solid #fff;height:17vh; }
+        article .phone-a p{margin:6ch auto 0;text-align: center;line-height: 18vh;border:2px solid #fff;border-radius: 50%;
+        width:6ch;height:6ch;}
+        article .phone-b{width:100%;border:2px solid #fff;height:4vh; border-top:none;padding-top: 2ch;}
+        article .phone-b p{margin:0 auto 0;text-align: center;border:2px solid #fff;border-radius: 50%;
+            width:2ch;height:2ch;}
+        article .manage{padding: 10%;width:80%;text-align: center;font-size: 22px;
+            color: #fff;}
+
+        footer{width:100%;height:10%;background: rgba(0,0,0,.15);border-top:1px solid #fff;display: flex; }
+        footer div{color:#fff;border-right: 1px solid #fff ;flex: 1;height: 100%;text-align: center;line-height: 10vh;font-size: 15px;}
+        footer div a{width: 100%;height: 100%;display: block;}
+    </style>
+</head>
+<body>
+<header>
+    <div class="banner-span">
+        <p><span class="on"></span></p>
+        <p><span></span></p>
+        <p><span></span></p>
+    </div>
+</header>
+<article>
+    <ul class="banner-ul">
+        <li >
+            <div class="phone">
+                <div class="phone-a"><p>&#xe611;</p></div>
+                <div class="phone-b"><p></p></div>
+            </div>
+            <p class="manage">Manage your tasks quick and easy from your phone</p>
+        </li>
+        <li >
+            <div class="phone">
+                <div class="phone-a"><p>&#xe611;</p></div>
+                <div class="phone-b"><p></p></div>
+            </div>
+            <form>
+                <p><span>PHONE NUMBER</span><i><input type="tel" maxlength="11"/></i></p>
+                <p><span></span><i><input type="button" value="Send a text message"/></i></p>
+                <p><span>VERIFICATION CODE</span><i><input type="text" maxlength="6"/></i></p>
+            </form>
+
+        </li>
+        <li>
+            <div class="phone">
+                <div class="phone-a"><p>&#xe613;</p></div>
+                <div class="phone-b"><p></p></div>
+            </div>
+            <p class="manage">Mobile phone related success</p>
+        </li>
+    </ul>
+
+</article>
+<footer>
+    <div id="thursday">SKIP</div>
+    <div class="underOne">NEXT</div>
+</footer>
+</body>
+<script>
+    $(function(){
+        var count = 0;
+        $(".underOne").click(function(){
+            $(".banner-ul li").eq(count).animate({marginLeft:-1000},1000, function () { $(this).hide();});
+            $(".banner-span span").eq(count).removeClass("on");
+            if(count<=1){count++;}
+            $(".banner-ul li").eq(count).animate({marginLeft:1000},0,function(){$(this).show().animate({marginLeft:0},1000)});
+            $(".banner-span span").eq(count).addClass("on")
+            if(count==2){
+                $(this).html("<a href='thursday.html'>COMPLETE</a>")
+            }
+        })
+
+    })
+</script>
+<script src="js/mui.min.js"></script>
+    <script>
+    	//初始化窗口
+	mui.init();
+    	//绑定事件
+    	document.getElementById('thursday').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'thursday.html', //目标页面的url
+			show:{
+				aniShow:'slide-in-right',//动画名称
+    				duration:500		  //动画时间
+				},//动画  			
+    			waiting:{
+    				autoShow:false
+    			}
+    		})
+    	})
+    </script>
+</html>

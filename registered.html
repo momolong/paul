@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>logn</title>
+    <link rel="stylesheet" href="css/global.css"/>
+    <link rel="stylesheet" href="css/font.css"/>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <style>
+        html{width: 100%;}
+        body{width:100%;heigt:50ch;background: url("img/bc-0.png");background-size: 100%;overflow:hidden;position:relative;}
+        a{color:#fff;text-decoration: none;}
+        a:hover{color: #fff;text-decoration: none;}
+        input[type="radio"]{-webkit-appearance:none;width:10px;height:10px;background: #ccc;border: none;border-radius: 50%;}
+        input[type="radio"]:checked{background: #fff;}
+
+        header{width:100%;height:8ch;}
+        header h4{padding-top:5%;text-align: center;color:#fff;position: relative;line-height: 22px;font-weight: normal;}
+        header h4 span{font-family: iconfont;font-size: 22px;color:rgba(255,255,255,.5);position: absolute;left:5%;}
+
+        article{width:100%;height:80%;background: rgba(0,0,0,.15);color:#fff;overflow-y:scroll;}
+        article .titter{text-align: center;font-family: "iconfont"}
+        article .titter li h1{font-size: 26px;margin:2ch 0 2ch 0}
+        article .titter li span{font-size: 26px;}
+        article .titter li:first-child{height:28ch;display: flex;}
+        article .titter li:first-child a{width:50%; display:block;flex:1;border-bottom: 1px solid #fff;}
+        article .titter li:first-child a:first-child{border-right: 1px solid #fff;}
+        article .titter li:last-child{height: 18ch;line-height: 18ch}
+        article .name{padding: 0 8% 20px;border-top:1px solid #fff; }
+        article .name li{height:8ch;line-height: 8ch;border-bottom:1px solid #fff;display: flex;}
+        article .name li:last-child{border: none;}
+        article .name li span{flex: 3;}
+        article .name li i{flex:7;font-style:normal;}
+        article .name li i input:not([type=radio]){background: none;border: none;width:100%;}
+
+        footer{width:100%;height:8ch;position: absolute;botton:0;}
+        footer p{text-align: center;line-height:10vh;}
+    </style>
+</head>
+<body>
+    <header>
+        <p>
+        <h4><span id="index">&#xe611;</span>SIGN UP</h4>
+        </p>
+    </header>
+    <article>
+        <ul class="titter">
+            <li>
+                <a href="#"><h1>&#xe603;</h1>Connect with Twitter</a>
+                <a href="#"><h1>&#xe60b;</h1>Connect with Twitter</a>
+            </li>
+            <li><span>&#xe604;</span>  Connect with Twitter</li>
+        </ul>
+        <ul class="name">
+            <li><span>NAME</span><i><input type="text"/></i></li>
+            <li><span>EMAIL</span><i><input type="email"/></i></li>
+            <li><span>PASSWORD</span><i><input type="password"/></i></li>
+            <li><span>GENDER</span><i><label><input type="radio" name="sex"/>Male</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="radio" name="sex"/>Female</label></i></li>
+            <li><span>BIRTHDAY</span><i><input type="text" placeholder="2016.16.11"/></i></li>
+        </ul>
+    </article>
+    <footer>
+        <p><a href="#" id="phone">CONTINUE</a></p>
+    </footer>
+    <script src="js/mui.min.js"></script>
+    <script>
+    	//初始化窗口
+	mui.init();
+    	//绑定事件
+    	document.getElementById('index').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'index.html', //目标页面的url
+			show:{
+				aniShow:'slide-in-right',//动画名称
+    				duration:500		  //动画时间
+				},//动画  			
+    			waiting:{
+    				autoShow:false
+    			}
+    		})
+    	})
+    	document.getElementById('phone').addEventListener('tap',function(){
+    	 	//打开新页面
+    		mui.openWindow({
+    			url:'phone.html', //目标页面的url
+			show:{
+				aniShow:'slide-in-right',//动画名称
+    				duration:500		  //动画时间
+				},//动画  			
+    			waiting:{
+    				autoShow:false
+    			}
+    		})
+    	})
+    </script>
+</body>
+</html>
